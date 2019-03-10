@@ -1,0 +1,39 @@
+{
+    "apiRoot": "/user",
+    "hostName": "",
+    "port": 4001,
+    "swagger": {
+        "url": "/api-docs",
+        "enableUI": false,
+        "spec": ""
+    },
+    "remoting": {
+        "cors": {
+            "origin": "*",
+            "optionsSuccessStatus": 200
+        },
+        "json": {
+            "strict": true,
+            "limit": "200mb"
+        },
+        "urlencoded": {
+            "extended": true,
+            "limit": "100kb"
+        },
+        "logger": {
+            "logFilePath": "project.log",
+            "timestampFormat": "YYYY-MM-DD HH:mm:ss.SSS"
+        },
+        "rest": {
+            "errorHandler": {
+                "fieldName": "error",
+                "writeLog": true
+            },
+            "successHandler": {
+                "fieldName": "body",
+                "writeLog": false
+            },
+            "convertNullToError": true
+        }
+    }
+}
